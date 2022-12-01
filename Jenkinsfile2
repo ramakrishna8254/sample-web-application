@@ -17,7 +17,12 @@ pipeline{
                 args '-v $HOME/.m2:/root/.m2'
                 }
 	       }
-                    }
-		    sh "mvn clean install"
                   }
+		 stage('maven build'){
+                  steps{
+                      script{
+		    	                sh "mvn clean install"
+                      	  }
+               	     }  
+                 }	
 	}  
