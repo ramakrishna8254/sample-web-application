@@ -12,8 +12,11 @@ pipeline{
 		stage('Quality Gate Status Check'){
                   steps{
                       script{
-                      withSonarQubeEnv('sonarserver') { 
-                      sh "mvn sonar:sonar -Dsonar.login=admin -Dsonar.password=admin"
+                      withSonarQubeEnv('sonarserver') {
+			      withCredentials([usernameColonPassword(credentialsId: 'SONARLOGIN', variable: 'sonarlogin')]) {
+    				sh "mvn sonar:sonar -Dsonar.login=$sonarlogin -Dsonar.password=$sonarlogin"
+}
+                      
 		    sh "mvn clean install"
                   }
                 }  
