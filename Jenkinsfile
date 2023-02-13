@@ -14,7 +14,7 @@ pipeline{
                       script{
                       withSonarQubeEnv('sonarserver') {
 			      withCredentials([usernameColonPassword(credentialsId: 'SONARLOGIN', variable: 'sonarlogin')]) {
-    				sh "mvn sonar:sonar -Dsonar.login=$sonarlogin -Dsonar.password=$sonarlogin"
+    				sh "mvn sonar:sonar"
 }
                       
 		    sh "mvn clean install"
