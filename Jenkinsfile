@@ -13,7 +13,7 @@ pipeline{
                   steps{
                       script{
                       withSonarQubeEnv('sonarserver') { 
-                      sh "mvn sonar:sonar -Dsonar.login=sonarjenkinsintegraion"
+                      sh "mvn sonar:sonar -Dsonar.login=admin -Dsonar.password=admin"
                        }
                       timeout(time: 1, unit: 'HOURS') {
                       def qg = waitForQualityGate()
