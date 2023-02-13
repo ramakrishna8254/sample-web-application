@@ -14,8 +14,7 @@ pipeline{
                       script{
                       withSonarQubeEnv('sonarserver') {
 			      sh "mvn sonar:sonar -Dsonar.login=admin -Dsonar.password=admin"
-                      
-		    sh "mvn clean install"
+                              sh "mvn clean install"
                   }
                 }  
               }
