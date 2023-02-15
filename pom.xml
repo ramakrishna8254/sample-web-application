@@ -15,7 +15,9 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-	
+	<groupId>com.webappmaven.jacoco</groupId>
+  <artifactId>webappmaven</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
 	<build>
     <finalName>WebApp</finalName>
   </build>
