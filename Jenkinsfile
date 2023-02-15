@@ -14,7 +14,7 @@ pipeline{
                       script{
                       withSonarQubeEnv('sonarserver') {
 			      sh "mvn test jacoco:report sonar:sonar -Dsonar.login=admin -Dsonar.password=admin"
-			      sh "mvn clean install sonar:sonar  -Dsonar.login=admin -Dsonar.password=admin -Dsonar.java.binaries=**/*.java"   
+			      sh "mvn clean install sonar:sonar  -Dsonar.login=admin -Dsonar.password=admin"   
 			      		      }
                 }  
               }
