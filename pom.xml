@@ -18,12 +18,11 @@
   <build>
     <finalName>WebApp</finalName>
   </build>  	   
-	
-<properties>
-  <sonar.host.url>http://ec2-13-233-193-76.ap-south-1.compute.amazonaws.com:9000/sonar.host.url>
-  <sonar.language>java</sonar.language>
-  <sonar.scm.provider>git</sonar.scm.provider>
-</properties>
+	<properties>
+  	   <sonar.host.url>http://ec2-13-233-193-76.ap-south-1.compute.amazonaws.com:9000/sonar.host.url>
+           <sonar.language>java</sonar.language>
+           <sonar.scm.provider>git</sonar.scm.provider>
+	</properties>
 <plugin>
   <groupId>org.sonarsource.scanner.maven</groupId>
   <artifactId>sonar-maven-plugin</artifactId>
