@@ -16,15 +16,17 @@
     </dependency>
   </dependencies>
 	
+	<plugin>
+  <groupId>org.sonarsource.scanner.maven</groupId>
+  <artifactId>sonar-maven-plugin</artifactId>
+  <version>3.2</version>
+	</plugin>
+	
   <build>
     <finalName>WebApp</finalName>
   </build>  	   
 	
-<plugin>
-  <groupId>org.sonarsource.scanner.maven</groupId>
-  <artifactId>sonar-maven-plugin</artifactId>
-  <version>3.2</version>
-</plugin>
+
 	<properties>
   	   <sonar.host.url>http://ec2-13-233-193-76.ap-south-1.compute.amazonaws.com:9000/</sonar.host.url>
            <sonar.language>java</sonar.language>
