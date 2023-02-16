@@ -54,6 +54,18 @@
     </pluginManagement>
   </build>
   
+  <properties>
+    <java.version>1.8</java.version>
+    <sonar.language>java</sonar.language>
+    <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
+    <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
+       <sonar.coverage.jacoco.xmlReportPaths>${project.build.directory}/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
+    <sonar.jacoco.reportsPaths>${project.build.directory}/jacoco-ut.exec</sonar.jacoco.reportsPaths>
+    <sonar.tests>src/test/java</sonar.tests>
+    <sonar.projectKey>sonar-test</sonar.projectKey>
+    <sonar.host.url>http://ec2-3-7-253-96.ap-south-1.compute.amazonaws.com:9000</sonar.host.url>
+</properties>
+  
     <profiles>
     <profile>
       <id>coverage</id>
